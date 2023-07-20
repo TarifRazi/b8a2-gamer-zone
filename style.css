@@ -100,6 +100,28 @@ h3 {
 }
 
 
+@media screen and (max-width:576px) {
+
+    .nav-cont {
+        flex-direction: column;
+        margin: 0 2px 150px;
+    }
+
+    .nav-compo ul {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .nav-compo ul li {
+        margin-top: 36px;
+    }
+
+    h1{
+        font-size: 3rem;
+    }
+}
+
+
 
 /* banner styles */
 
@@ -108,24 +130,23 @@ h3 {
     display: flex;
     justify-content: space-between;
     flex-direction: row-reverse;
-    gap: 20px;
-    background-image: url(images/Group\ 14.png);
-    background-repeat: no-repeat;
-    height: 500px;
     align-items: center;
+    gap: 20px;
+    height: 500px;
     margin-right: 200px;
-
     background-color: #fff;
     /* border: 2px solid blue; */
 }
 
+    
 .goat-desc {
-
+    background-image: url(images/Group\ 14.png);
+    background-repeat: no-repeat;
     background-size: cover;
-    width: 50%;
-    align-items: center;
+    /* width: 50%; */
+    /* align-items: center; */
     /* padding-left: 200px; */
-    padding: 15px 0 0 200px;
+    padding: 20px 0 20px 200px;
 }
 
 .goat-desc h2 {
@@ -186,6 +207,28 @@ h3 {
     margin-left: 14px;
 }
 
+
+@media screen and (max-width:576px) {
+    .goat-cont {
+        padding-right: 0;
+        height: 900px;
+        flex-direction: column-reverse;
+        /* align-items: center; */
+        /* justify-items: center; */
+        margin: 0 auto;
+    }
+    .goat-img{
+        width: 100%;
+        margin-bottom: 100px;
+    }
+
+    .goat-desc {
+        width: 100%;
+        margin-bottom: 30px;
+            padding: 20px 10px;
+    }
+}
+
 /* funny vdo cont */
 
 .funny-vdo-cont {
@@ -217,14 +260,57 @@ h3 {
 .card {
     width: 23%;
     text-align: justify;
+    position: relative;
+    transition: all .5s ease-in-out;
 }
 
 .card img {
     width: 100%;
     /* height: 400px; */
-    flex-shrink: 0;
+    /* flex-shrink: 0; */
 }
 
+.watch-btn{
+    position: absolute;
+    left: 70px;
+    top: 100px;
+    display: none;
+    background: none;
+    border: none;
+    color: #FF42A5;
+    
+}
+
+.card:hover .watch-btn{
+    display: block;
+}
+
+.card:hover img {
+    opacity: 0.6;
+}
+
+@media screen and (max-width:576px) {
+    .funny-vdo-cont{
+        flex-direction: column;
+        margin: 0;
+    }
+    .funny-vdo-img{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .card{
+        width: 80%;
+        padding-left:100px ;
+    }
+    .watch-btn{
+        left: 210px;
+        top: 150px;
+    }
+}
+
+/* .card:hover .watch-btn{
+    display: block;
+} */
 
 
 /* play instant */
@@ -255,6 +341,7 @@ h3 {
 
 .play-inst-img {
     padding-top: 100px;
+    height: 600px;
     /* border:1px solid #0B0223; */
 }
 
@@ -296,10 +383,18 @@ h3 {
     left: 200px;
 }
 
+@media screen and (max-width:576px) {
+    .play-instant2{
+        flex-direction: column-reverse;
+        margin-top: 500px;
+    }
+}
+
 /* buttons styles */
 .buttons {
     margin-top: 50px;
-    /* margin: 120px; */
+    margin: 120px;
+    margin-top: 20px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -311,7 +406,7 @@ h3 {
     justify-content: space-between;
     height: 80px;
     align-items: center;
-    /* padding: 20px; */
+    padding: 20px;
     border-radius: 50px;
     background: #FFF;
     padding-right: 20px;
@@ -337,18 +432,36 @@ h3 {
     cursor: pointer;
 }
 
+@media screen and (max-width:576px) {
+    .buttons{
+        margin: auto;
+        padding-bottom: 100px;
+    }
+    .btn{
+        width: 30%;
+        font-size: 0.6rem;
+        justify-content: start;
+        padding: 5px;
+        height: auto;
+    }
+    .btn img{
+        width: 30px;
+        margin: 5px;
+    }
+}
+
 /* footer */
 .footer {
-    border: 1px solid #4EC5F7;
     display: block;
     text-align: center;
     background: #0B0223;
+    padding-bottom: 120px;
+    padding-top: 120px;
 }
 
 .footer .footer-logo {
     display: flex;
     justify-content: center;
-    margin: 120px;
     color: white;
 }
 
@@ -389,9 +502,10 @@ h3 {
     margin: 10px;
 }
 
-.small{
-    margin-bottom: 150px;
+.small {
+    /* margin-bottom: 150px; */
 }
+
 small {
     color: rgba(255, 255, 255, 0.60);
     text-align: center;
@@ -402,31 +516,40 @@ small {
     line-height: normal;
 }
 
+@media screen and (max-width:576px) {
+    .footer-menus{
+        margin: 50px;
+        flex-wrap: wrap;
+    }
+    .footer-menus a{
+        padding: 20px;
+    }
+    .footer-icon button{
+        margin: 20px;
+    }
+    .footer-icon{
+        margin: 80px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .terms-part{
+        margin: 30px;
+        flex-wrap: wrap;
+    }
+}
+
 /* responsive */
 
 /* mobile  */
 
 @media screen and (max-width:576px) {
 
-    .nav-cont {
+
+
+    .goat-cont,
+    .play-instant {
         flex-direction: column;
-        margin: 38px 2px
-    }
-
-    .nav-compo ul {
-        flex-direction: column;
-        justify-content: center;
-    }
-
-
-
-    .nav-compo ul li {
-        margin-top: 36px;
-
-    }
-
-    .goat-cont {
-        flex-direction: column;
+        margin: 0;
     }
 
 
@@ -434,4 +557,5 @@ small {
         width: 300px;
         top: 360px;
     }
+
 }
