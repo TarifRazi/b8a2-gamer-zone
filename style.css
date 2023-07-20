@@ -13,11 +13,12 @@ p {
     font-style: normal;
     font-weight: 500;
     line-height: normal;
-    margin-bottom: 17px;
+    margin-bottom: 8px;
+    margin-top: 8px;
 }
 
-h1{
-    
+h1 {
+
     font-size: 5.9rem;
     font-weight: 800;
     line-height: normal;
@@ -28,6 +29,15 @@ h2 {
     color: #0B0223;
     font-size: 3rem;
     font-weight: 700;
+}
+
+h3 {
+    color: #0B0223;
+    font-family: Work Sans;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
 }
 
 /* nav style */
@@ -89,6 +99,8 @@ h2 {
     padding: 17px 14px;
 }
 
+
+
 /* banner styles */
 
 /* goat section */
@@ -98,19 +110,17 @@ h2 {
     flex-direction: row-reverse;
     gap: 20px;
     background-image: url(images/Group\ 14.png);
-    /* width: 1350px; */
+    background-repeat: no-repeat;
     height: 500px;
     align-items: center;
-    /* padding-left: 240px; */
-    /* padding-right: 240px; */
-    margin-right: 200px; 
+    margin-right: 200px;
 
     background-color: #fff;
     /* border: 2px solid blue; */
 }
 
 .goat-desc {
-    
+
     background-size: cover;
     width: 50%;
     align-items: center;
@@ -118,7 +128,7 @@ h2 {
     padding: 15px 0 0 200px;
 }
 
-.goat-desc h4 {
+.goat-desc h2 {
     color: #0B0223;
     font-size: 3rem;
     font-weight: 600;
@@ -134,9 +144,7 @@ h2 {
 
 .goat-img {
     width: 40%;
-    /* border: 1px solid black; */
     margin-left: 66px;
-    /* border: 1px solid green; */
 }
 
 .goat-img img {
@@ -146,7 +154,6 @@ h2 {
     position: absolute;
     top: 232px;
     bottom: 0;
-    /* border: 1px solid red; */
 }
 
 .goat-btn1 {
@@ -218,6 +225,8 @@ h2 {
     flex-shrink: 0;
 }
 
+
+
 /* play instant */
 
 .play-instant {
@@ -237,7 +246,7 @@ h2 {
 }
 
 .play {
-    
+
     background: linear-gradient(180deg, #F948B2 100%, #8758F1 0%);
     background-clip: text;
     -webkit-background-clip: text;
@@ -261,10 +270,12 @@ h2 {
 }
 
 .play-instant2 {
+    height: 500px;
     display: flex;
     margin: 0 200px;
     /* height: 500px; */
     align-items: center;
+    /* border: 1px solid lawngreen; */
 }
 
 .play-inst-desc2 {
@@ -285,8 +296,111 @@ h2 {
     left: 200px;
 }
 
+/* buttons styles */
+.buttons {
+    margin-top: 50px;
+    /* margin: 120px; */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 120px;
+}
 
+.btn {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    align-items: center;
+    /* padding: 20px; */
+    border-radius: 50px;
+    background: #FFF;
+    padding-right: 20px;
+    border: none;
 
+    color: #0B0223;
+    font-family: Work Sans;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.btn img {
+    width: 60px;
+    border-radius: 50%;
+    margin: 10px;
+}
+
+.btn:hover {
+    border: 1px solid #FF42A5;
+    color: #FF42A5;
+    cursor: pointer;
+}
+
+/* footer */
+.footer {
+    border: 1px solid #4EC5F7;
+    display: block;
+    text-align: center;
+    background: #0B0223;
+}
+
+.footer .footer-logo {
+    display: flex;
+    justify-content: center;
+    margin: 120px;
+    color: white;
+}
+
+.footer-menus {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 56px 300px;
+}
+
+.footer-menus a {
+
+    color: #FFF;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.footer-icon button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.footer-icon,
+.terms-part {
+    display: flex;
+    justify-content: space-around;
+    margin: 56px 300px;
+
+}
+
+.terms-part a {
+    text-decoration: none;
+    color: #FFF;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 10px;
+}
+
+.small{
+    margin-bottom: 150px;
+}
+small {
+    color: rgba(255, 255, 255, 0.60);
+    text-align: center;
+    font-family: Work Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
 
 /* responsive */
 
@@ -304,6 +418,8 @@ h2 {
         justify-content: center;
     }
 
+
+
     .nav-compo ul li {
         margin-top: 36px;
 
@@ -313,7 +429,9 @@ h2 {
         flex-direction: column;
     }
 
-    .goat-img {
-        width: 100%;
+
+    .goat-img img {
+        width: 300px;
+        top: 360px;
     }
 }
